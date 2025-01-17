@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>연세가상인턴-시계</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- 헤더: 날짜 및 배터리 -->
+    <header>
+        <h1 id="date"></h1>
+        <div class="battery-wrap">
+            <div id="battery-container">
+                <div id="battery-fill"></div>
+            </div>
+            <h2 id="battery-text">100%</h2>
+        </div>
+    </header>
+
+    <main>
+    <!-- 시계 영역 -->
+        <div class="wrap">
+            <h3>Current Time</h3>
+            <div id="time"></div>
+        </div>
+        
+        <hr>
+    <!-- 알람 상단 영역 : 알람 추가, 삭제 버튼 -->
+        <div class="wrap">
+            <div class="alarm-top">
+            <h3>Alarm</h3>
+            <button class="img-btn" id="add-alarm-btn"><img src="assets/images/add.png"></button>
+            <button class="img-btn"  id="delete-alarm-btn"><img src="assets/images/delte.png"></button>
+            </div>
+
+
+    <!-- 알람 목록 영역  -->
+        <div class="alarm-container">
+            <ul id="alarm-list"></ul>
+        </div>
+
+
+
+    <!-- 알람 추가 모달 -->
+        <div id="alarm-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h2>New Alarm Setting</h2>
+                <p>알람 시각을 입력하세요.</p>
+                <form id="alarm-form">
+                    <input type="text" id="new-time" placeholder="hh:mm:ss" maxlength="8">
+                    <button type="submit">Confirm</button>
+                </form>
+                    
+            </form>
+        </div>
+    </div>
+
+    <!-- 알람 삭제 모달-->
+
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h2> Delete the First Alarm</h2>
+            <p>정말 삭제하시겠습니까?</p>
+            <p id="first-alarm"></p>
+            <div class="delete-btn">
+            <button id="confirm-delete">확인</button>
+            <button id="cancel-delete">취소</button>
+            </div>
+        </div>
+    </div>
+        </div>
+    </main>
+
+    <!-- js -->
+    <script src="assets/js/Time.js"></script>
+    <script src="assets/js/Battery.js"></script>
+    <script src="assets/js/Alarm.js"></script>
+</body>
+</html>
