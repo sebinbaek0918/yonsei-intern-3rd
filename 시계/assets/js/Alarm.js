@@ -69,6 +69,8 @@ function addAlarm(event) {
     const listItem = document.createElement('li');
     listItem.textContent = `⏰ ${newTime}`;
     alarmList.appendChild(listItem);
+    document.getElementById("alarm-form").reset();
+
 
     hideAddModal();
 }
